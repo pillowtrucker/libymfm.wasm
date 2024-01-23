@@ -28,12 +28,19 @@ rustflags = [
   "-lc++abi", 
   "-lc++"
 ]
+linker="rust-lld"
+
 [target.aarch64-apple-darwin]
 rustflags = [
   "-lstdc++",
   "-lc++abi",
   "-lc++"
 ]
+linker="rust-lld"
+
+[target.x86_64-pc-windows-msvc]
+"-lntdll"
 
 [build]
 #target = "wasm32-wasi"
+
