@@ -22,6 +22,14 @@ rustflags = [
 rustflags = [
   "-lstdc++"
 ]
+[target.x86_64-apple-darwin]
+rustflags = [
+  "-lstdc++"
+]
+[target.aarch64-apple-darwin]
+rustflags = [
+  "-lstdc++"
+]
 
 [build]
 #target = "wasm32-wasi"
