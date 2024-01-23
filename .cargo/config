@@ -25,10 +25,12 @@ rustflags = [
 [target.x86_64-apple-darwin]
 rustflags = [
   "-lstdc++"
+  "-lc++"
 ]
 [target.aarch64-apple-darwin]
 rustflags = [
-  "-lstdc++"
+  "-lstdc++",
+  "-lc++"
 ]
 
 [build]

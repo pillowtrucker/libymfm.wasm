@@ -8,9 +8,9 @@ use super::{
 };
 use std::collections::HashMap;
 
-//#[link(name = "ymfm")]
-#[cfg_attr(windows, link(name = "ymfm.dll", kind = "dylib"))]
-#[cfg_attr(unix, link(name = "ymfm", kind = "dylib"))]
+//#[cfg_attr(windows, link(name = "ymfm.dll", kind = "dylib"))]
+//#[cfg_attr(unix, link(name = "ymfm", kind = "dylib"))]
+#[link(name = "ymfm")]
 extern "C" {
     fn ymfm_add_chip(chip_num: u16, clock: u32) -> u32;
     fn ymfm_write(chip_num: u16, index: u16, reg: u32, data: u8);
