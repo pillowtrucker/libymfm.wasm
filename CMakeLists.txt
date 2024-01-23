@@ -2,7 +2,10 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ymfm C CXX)
 
-set(CMAKE_TOOLCHAIN_FILE ./cmake/x86-64.cmake)
+set(CMAKE_SYSTEM_VERSION 1)
+set(CMAKE_C_COMPILER           clang)
+set(CMAKE_CXX_COMPILER         clang++)
+
 include(./cmake/macros.cmake)
 
 header_directories(
