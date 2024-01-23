@@ -2,6 +2,7 @@ cmake_minimum_required(VERSION 3.0)
 
 project(ymfm C CXX)
 
+set(CMAKE_TOOLCHAIN_FILE ./cmake/x86-64.cmake)
 include(./cmake/macros.cmake)
 
 header_directories(
