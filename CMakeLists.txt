@@ -1,10 +1,11 @@
 cmake_minimum_required(VERSION 3.0)
 
-project(ymfm C CXX)
-
 set(CMAKE_SYSTEM_VERSION 1)
 set(CMAKE_C_COMPILER           clang)
 set(CMAKE_CXX_COMPILER         clang++)
+
+project(ymfm C CXX)
+
 
 include(./cmake/macros.cmake)
 
