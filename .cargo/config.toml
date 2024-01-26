@@ -39,7 +39,8 @@ rustflags = [
 linker = "rust-lld"
 
 [target.x86_64-pc-windows-msvc]
-linket = "rust-lld.exe"
+linker = "rust-lld.exe"
+rustflags = ["-C", "target-feature=+crt-static"]
 #rustflags= ["target-feature=+crt-static"]
 #rustflags = ["-lntdll"]
 #rustflags=["-lucrt"]
