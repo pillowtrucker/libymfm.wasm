@@ -32,7 +32,12 @@ if(MSVC)
 add_compile_flags(CXX
     /O3
     /std:c++14
+    -Wno-array-bounds
 )
+add_compile_flags(LD
+  -lucrt
+)
+
 else()
 add_compile_flags(CXX
     -O3
