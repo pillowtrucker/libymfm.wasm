@@ -5,6 +5,7 @@ set(CMAKE_C_COMPILER           clang)
 set(CMAKE_CXX_COMPILER         clang++)
 
 project(ymfm C CXX)
+add_compile_definitions(NDEBUG)
 #add_compile_definitions(_HAS_ITERATOR_DEBUGGING=0 _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH)
 include(./cmake/macros.cmake)
 
