@@ -6,7 +6,7 @@ set(CMAKE_CXX_COMPILER         clang++)
 
 project(ymfm C CXX)
 set(_HAS_ITERATOR_DEBUGGING 0)
-add_compile_definitions(_HAS_ITERATOR_DEBUGGING=0 NDEBUG _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH)
+add_compile_definitions(_HAS_ITERATOR_DEBUGGING=0 NDEBUG _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH _MT)
 include(./cmake/macros.cmake)
 
 header_directories(
