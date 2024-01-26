@@ -5,8 +5,8 @@ set(CMAKE_C_COMPILER           clang)
 set(CMAKE_CXX_COMPILER         clang++)
 
 project(ymfm C CXX)
-add_compile_definitions(NDEBUG)
-set(CMAKE_BUILD_TYPE Release)
+add_compile_definitions(_DEBUG)
+set(CMAKE_BUILD_TYPE Debug)
 
 #add_compile_definitions(_HAS_ITERATOR_DEBUGGING=0 _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH)
 include(./cmake/macros.cmake)
@@ -30,12 +30,12 @@ add_source_files(
 
 if(MSVC)
 add_compile_flags(CXX
-    /O3
+#    /O3
     /std:c++14
     -Wno-array-bounds
 )
 add_compile_flags(LD
-  -lucrt
+  -lucrtd
 )
 
 else()
