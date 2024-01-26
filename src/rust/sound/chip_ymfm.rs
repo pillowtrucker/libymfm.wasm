@@ -8,6 +8,10 @@ use super::{
 };
 use std::collections::HashMap;
 
+#[cfg_attr(
+    target_env = "msvc",
+    link(name = "msvcrt", cfg(target_feature = "crt-static"))
+)]
 #[cfg_attr(windows, link(name = "ymfm", kind = "static"))]
 #[cfg_attr(unix, link(name = "ymfm", kind = "static"))]
 //#[link(name = "ymfm")]
