@@ -6,6 +6,8 @@ set(CMAKE_CXX_COMPILER         clang++)
 
 project(ymfm C CXX)
 add_compile_definitions(NDEBUG)
+set(CMAKE_BUILD_TYPE Release)
+
 #add_compile_definitions(_HAS_ITERATOR_DEBUGGING=0 _ALLOW_ITERATOR_DEBUG_LEVEL_MISMATCH)
 include(./cmake/macros.cmake)
 
@@ -26,6 +28,12 @@ add_source_files(
     ./components/ymfm/src/ymfm_ssg.cpp
 )
 
+if(MSVC)
+add_compile_flags(CXX
+    /O3
+    /std:c++14
+)
+else()
 add_compile_flags(CXX
     -O3
     -std=c++14
@@ -34,6 +42,8 @@ add_compile_flags(CXX
     -fPIC
     -mbulk-memory
 )
+endif()
+
 
 add_compile_flags(LD
 )
