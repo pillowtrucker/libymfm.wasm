@@ -7,13 +7,15 @@ use super::{
     RomBusType, RomIndex, SoundChipType,
 };
 use std::collections::HashMap;
+/*
 #[cfg_attr(
     target_env = "msvc",
     link(name = "msvcrt", cfg(not(target_feature = "crt-static")))
 )]
-#[cfg_attr(windows, link(name = "ymfm"), kind = "static")]
-#[cfg_attr(unix, link(name = "ymfm", kind = "static"))]
-//#[link(name = "ymfm")]
+*/
+// #[cfg_attr(windows, link(name = "ymfm", kind = "static"))]
+// #[cfg_attr(unix, link(name = "ymfm", kind = "static"))]
+#[link(name = "ymfm", kind = "static")]
 extern "C" {
     fn ymfm_add_chip(chip_num: u16, clock: u32) -> u32;
     fn ymfm_write(chip_num: u16, index: u16, reg: u32, data: u8);

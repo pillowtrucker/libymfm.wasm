@@ -39,9 +39,10 @@ rustflags = [
 linker = "rust-lld"
 
 [target.x86_64-pc-windows-msvc]
+linker = "rust-lld.exe"
 #rustflags= ["target-feature=+crt-static"]
 #rustflags = ["-lntdll"]
-rustflags= ["-lucrt"]
+#rustflags= ["-lucrt"]
 
 [build]
 #target = "wasm32-wasi"
