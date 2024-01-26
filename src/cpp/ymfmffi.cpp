@@ -1,5 +1,8 @@
 // license:BSD-3-Clause
 // copyright-holders:Aaron Giles, Hiromasa Tanaka (for libymfm.wasm)
+#ifdef _DEBUG
+#undef _DEBUG
+#endif
 #include <cmath>
 #include <cstdio>
 #include <cstdint>
